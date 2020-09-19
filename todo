@@ -1,0 +1,17 @@
+A: main.go -- server/database --
+  1: make a socket that will listen to messages
+  2: make fake database
+  3: sort connections into types
+    - consumer
+    - producer
+    -- allow for other
+  2: design api for how messages are recieved and stored
+  3: actually store data
+
+B: client.go
+  1: create websocket connection to server and send and recieve messages
+  2: create consumer and producer
+  3: get two clients connected to the server
+  4: have them listen to different "topics"
+    (what kafka would call a "document" or "table")
+
