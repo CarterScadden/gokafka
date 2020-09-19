@@ -36,7 +36,7 @@ func (s Server) Run(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("%s sent: %s\n", connection.RemoteAddr(), string(msg))
 
 		// Write message back to browser
-		if err = conn.WriteMessage(msgType, msg); err != nil {
+		if err = connection.WriteMessage(msgType, msg); err != nil {
 			return
 		}
 	}
